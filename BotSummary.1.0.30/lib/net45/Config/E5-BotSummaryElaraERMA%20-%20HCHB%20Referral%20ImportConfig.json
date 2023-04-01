@@ -1,0 +1,30 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "Elara",
+    "enabled": "true",
+	"E5HookCredentialAsset": "Elara_SPA_Prod",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"SendAlert": "False",
+	"AlertInterval": "15",
+	"AlertDBName": "AlertDB.json",
+	"BucketName": "E5_Utils",
+	"SlackChannelId": "C0313EDEF70",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId" : "6152b1f60fd33c01d5292329",
+		"TaskName": "ERMA - HCHB Referral Import",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

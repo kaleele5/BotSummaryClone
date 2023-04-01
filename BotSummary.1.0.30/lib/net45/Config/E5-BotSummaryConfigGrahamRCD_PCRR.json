@@ -1,0 +1,33 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  
+  "Clients": [{
+    "Name": "Graham",
+    "enabled": "true",
+	"E5HookCredentialAsset": "Graham Creds",
+    "EnableQueueSearch" : "False",
+	"PostInSlack": "False",
+	"UploadToBox": "True",
+	"GetLatestRunUpdate": "False",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",  
+	"Queue_Search_Limit" : 100,     
+	"Tasks": [
+			{
+		"TaskId" : "6164444888c1c002996aa955",
+		"TaskName": "RCD - Pre Claim Review Request",
+		"CSheetName": "RCD - Pre Claim Review Request",
+		"FolderID" : "162365919222",
+		"UniqueRecords":"True",//True for unique records only
+		"UniqueKeycolumnNames":"MR#|socDate",
+		"CustomFileName":"April1-May5",//Empty for usual filepath
+		"SpecificDate": "Yes",// No for previous date
+		"StartDate": "2022-04-01",//yyyy-MM-dd
+		"EndDate": "2022-05-05",//yyyy-MM-dd
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

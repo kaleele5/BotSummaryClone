@@ -1,0 +1,27 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "Salesforce",
+    "enabled": "true",
+	"E5HookCredentialAsset": "SalesforceAH",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"BucketName": "E5_Utils",
+	"SlackChannelId": "C0313EDEF70",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId" : "615432f58cdf2301d5e37a7e",
+		"TaskName": "HCHB to Salesforce Referral Integration",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

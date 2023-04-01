@@ -1,0 +1,44 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "SelectData",
+    "enabled": "true",
+	"E5HookCredentialAsset": "SelectDataAH",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"EnableQueueSearch" : "False",
+	"BucketName": "E5_Utils",
+	"SlackChannelId": "C0313EDEF70",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId" : "6018154ec635e6001946cb5b",
+		"TaskName": "Coding Inbound - Incomplete HCHB",
+		"ThresholdValue": 50,
+		"TimeInterval": 05,
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "6026807e26c6e900131b1234",
+		"TaskName": "Coding Inbound - Document Retrieval",
+		"ThresholdValue": 50,
+		"TimeInterval": -1000,
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "603d1cffd61d890019ecd666",
+		"TaskName": "Outbound - Coding into HCHB",
+		"ThresholdValue": 50,
+		"TimeInterval": -1000,
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

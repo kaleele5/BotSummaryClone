@@ -1,0 +1,56 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "SelectData",
+    "enabled": "true",
+	"E5HookCredentialAsset": "SmartcareAH",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"EnableQueueSearch" : "true",
+	"Queue_Search_String" : "SD",
+	"SendAlert": "True",
+	"AlertInterval": "15",
+	"AlertDBName": "AlertDB.json",
+	"BucketName": "E5_Utilis",
+	"SlackChannelId": "C030REL3KUJ",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId" : "60267fed26c6e900131b1230",
+		"TaskName": "Coding Inbound - Document Retrieval",
+		"ThresholdValue": 50,
+		"TimeInterval": 05,
+		"QueueNames": ["SDSmartCareInboundsweep1_Advantage", "SDSmartCareInboundsweep1_HCI", "SDSmartCareInboundsweep1_HCITX", "SDSmartCareInboundsweep1_TSC", "SDSmartCareInboundsweep1_Alpine", "SDSmartCareInboundsweep1_Hallmark"],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "60f0015f6e39e60021e30753",
+		"TaskName": "Referral Inbound - Sweep 2",
+		"ThresholdValue": 50,
+		"TimeInterval": -1000,
+		"QueueNames": ["SDSmartCareInboundsweep2_Advantage", "SDSmartCareInboundsweep2_HCI", "SDSmartCareInboundsweep2_HCITX", "SDSmartCareInboundsweep2_TSC", "SDSmartCareInboundsweep2_Alpine", "SDSmartCareInboundsweep2_Hallmark"],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "60f00122c6c144001884ac6f",
+		"TaskName": "Referral Outbound - Sweep 1",
+		"ThresholdValue": 50,
+		"TimeInterval": -1000,
+		"QueueNames": ["SDSmartCareOutboundsweep1_Advantage", "SDSmartCareOutboundsweep1_HCI", "SDSmartCareOutboundsweep1_HCITX", "SDSmartCareOutboundsweep1_TSC", "SDSmartCareOutboundsweep1_Alpine", "SDSmartCareOutboundsweep1_Hallmark"],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "60f001af6e39e60021e30757",
+		"TaskName": "Referral Outbound - Sweep 2",
+		"ThresholdValue": 50,
+		"TimeInterval": -1000,
+		"QueueNames": ["SDSmartCareOutboundsweep2_Advantage", "SDSmartCareOutboundsweep2_HCI", "SDSmartCareOutboundsweep2_HCITX", "SDSmartCareOutboundsweep2_TSC", "SDSmartCareOutboundsweep2_Alpine", "SDSmartCareOutboundsweep2_Hallmark"],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

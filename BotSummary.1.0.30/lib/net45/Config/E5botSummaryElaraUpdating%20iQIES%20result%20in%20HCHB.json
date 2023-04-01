@@ -1,0 +1,26 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "Elara",
+    "enabled": "true",
+	"E5HookCredentialAsset": "Elara_SPA_Prod",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"BucketName": "E5_Utils",
+	"SlackChannelId": "C0313EDEF70",//Slack Channel ID
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId": "61a4a1bb2b0d270011db420c",
+		"TaskName": "Updating iQIES result in HCHB",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

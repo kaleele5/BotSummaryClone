@@ -1,0 +1,27 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "Interim",
+    "enabled": "true",
+	"E5HookCredentialAsset": "InterimAH",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId" : "6177846fb0cf05002a276a45",
+		"TaskName": "Updating iQIES result in HCHB",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}
+
+

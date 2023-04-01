@@ -1,0 +1,1 @@
+Select * From `60eff4a89a4946001139dcc9_smartcarereferralcodingprod`Where created_at > '03/01/2022 00:00:00T00:00:00.122Z' and created_at < '04/01/2022 00:00:00T00:00:00.122Z' limit 10000Select * From `60eff4a89a4946001139dcc9_smartcarereferralcodingprod`Where created_at > '2022-03-01T00:00:00.122Z' and created_at < '2022-04-01T00:00:00.122Z' limit 10000

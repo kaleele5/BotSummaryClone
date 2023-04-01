@@ -1,0 +1,32 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  
+  "Clients": [{
+    "Name": "Aveanna",
+    "enabled": "true",
+	"E5HookCredentialAsset": "AveannaCredentials",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "False",
+	"UploadToBox": "True",
+	"GetLatestRunUpdate": "False",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+			{
+		"TaskId" : "623dd135afbc5a002a4a0b65",
+		"TaskName": "North Carolina RCD - Pre Claim Review Request",
+		"CSheetName": "North Carolina RCD Pre Claim Review Req",
+		"FolderID" : "162187889954",
+        "UniqueRecords":"False",//True for unique records only
+        "CustomFileName":"",//Empty for usual filepath
+		"SpecificDate": "Yes",// No for previous date
+		"StartDate": "2022-05-01",//yyyy-MM-dd
+		"EndDate": "2022-05-01",//yyyy-MM-dd
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

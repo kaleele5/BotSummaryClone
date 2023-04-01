@@ -1,0 +1,61 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "Encompass",
+    "enabled": "true",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"BucketName": "hari_testing",
+	"SlackChannelId": "C030REL3KUJ",//Slack Channel ID
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId": "61d8723b8e75cd002a474a8d",
+		"TaskName": "TSC - Review Eligibility Alert",
+		"E5HookCredentialAsset": "encompass_hub_TSC_cred",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Processed", "Failed", "Needs Attention"]
+		},
+		{
+		"TaskId": "61ee32d46a1f79001fa22ecf",
+		"TaskName": "HCI - Review Eligibility Alert",
+		"E5HookCredentialAsset": "encompass_hub_HCI_cred",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Processed", "Failed", "Needs Attention"]
+		},
+		{
+		"TaskId": "61ee41646a1f79001fa22f56",
+		"TaskName": "HCITX - Review Eligibility Alert",
+		"E5HookCredentialAsset": "encompass_hub_hcitx",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Processed", "Failed", "Needs Attention"]
+		},
+		{
+		"TaskId": "61ee43676a1f79001fa22f95",
+		"TaskName": "Hallmark - Review Eligibility Alert",
+		"E5HookCredentialAsset": "encompass_hub_hallmark",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Processed", "Failed", "Needs Attention"]
+		},
+		{
+		"TaskId": "61ee420af3e257002a2e15b2",
+		"TaskName": "Advantage - Review Eligibility Alert",
+		"E5HookCredentialAsset": "encompass_hub_advantage",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Processed", "Failed", "Needs Attention"]
+		},
+		{
+		"TaskId": "61ee4270f3e257002a2e15c6",
+		"TaskName": "Alpine - Review Eligibility Alert",
+		"E5HookCredentialAsset": "encompass_hub_alphine",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Processed", "Failed", "Needs Attention"]
+		}
+	]
+  }]
+}

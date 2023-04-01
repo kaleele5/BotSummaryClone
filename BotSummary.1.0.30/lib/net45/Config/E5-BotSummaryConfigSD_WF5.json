@@ -1,0 +1,33 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  
+  "Clients": [{
+    "Name": "SelectData",
+    "enabled": "true",
+	"E5HookCredentialAsset": "SelectDataHubCredentials",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "False",
+	"UploadToBox": "True",
+	"GetLatestRunUpdate": "False",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+
+				{
+		"TaskId" : "603d1cffd61d890019ecd666",
+		"TaskName": "Outbound - Coding into HCHB",
+		"CSheetName": "CodingIntoHCHB",
+		"FolderID" : "152225947224",
+		"UniqueRecords":"True",//True for unique records only
+		"CustomFileName":"UniqueRecords",//Empty for usual filepath
+		"SpecificDate": "Yes",// No for previous date
+		"StartDate": "2022-05-01",//yyyy-MM-dd
+		"EndDate": "2022-05-31",//yyyy-MM-dd
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

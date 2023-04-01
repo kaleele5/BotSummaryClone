@@ -1,0 +1,37 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "Elara",
+    "enabled": "true",
+	"E5HookCredentialAsset": "ElaraAH",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		{
+		"TaskId" : "6152b1f60fd33c01d5292329",
+		"TaskName": "ERMA - HCHB Referral Import",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "615fcae2f8339801b9738ac3",
+		"TaskName": "Uploading OASIS to iQIES",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		},
+		{
+		"TaskId": "61a4a1bb2b0d270011db420c",
+		"TaskName": "Updating iQIES result in HCHB",
+		"QueueNames": [],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

@@ -1,0 +1,35 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  
+  "Clients": [{
+    "Name": "Graham",//ClientName
+    "enabled": "true",
+	"E5HookCredentialAsset": "Graham Creds",//AutomationHub Credentials
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "False",
+	"UploadToBox": "true",
+	"GetLatestRunUpdate": "False",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",  
+	"Queue_Search_Limit" : 100,     
+	"Tasks": [
+			{
+		"TaskId" : "616444aa88c1c002996aa993",
+		"TaskName": "RCD - Update DCN, UTN and DL",
+		"CSheetName": "RCD - Update DCN, UTN and DL",
+		"PostUpdate":"No"
+		"UploadToBox":"True"
+		"FolderID" : "162365919222",//Box folder Id	
+		"UniqueRecords":"True",//True for unique records only
+		"UniqueKeycolumnNames":"MR#|episodeStartDate",//Combinationofcolumns forunique key	
+        "CustomFileName":"April1-May5",//Empty for usual filepath
+		"SpecificDate": "Yes",// No for previous date
+		"StartDate": "2022-04-01",//yyyy-MM-dd
+		"EndDate": "2022-05-05",//yyyy-MM-dd
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

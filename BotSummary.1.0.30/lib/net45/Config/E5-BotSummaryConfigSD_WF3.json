@@ -1,0 +1,32 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enhcyfkltn86mbi.m.pipedream.net",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  
+  "Clients": [{
+    "Name": "SelectData",
+    "enabled": "true",
+	"E5HookCredentialAsset": "SelectDataHubCredentials",
+	"EnableQueueSearch" : "False",
+	"PostInSlack": "False",
+	"UploadToBox": "True",
+	"GetLatestRunUpdate": "False",//Else Gets Bot summary of runs in Specified date range
+	"Queue_Search_String" : "SD",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+			{
+		"TaskId" : "6018154ec635e6001946cb5b",
+		"TaskName": "Coding Inbound - Incomplete HCHB",
+		"CSheetName": "IncompleteHCHB",
+		"FolderID" : "157632762230",
+		"UniqueRecords":"False",//True for unique records only
+		"CustomFileName":"UniqueRecords",//Empty for usual filepath
+		"SpecificDate": "Yes",// No for previous date
+		"StartDate": "2022-04-13",//yyyy-MM-dd
+		"EndDate": "2022-04-27",//yyyy-MM-dd
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}

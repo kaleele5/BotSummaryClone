@@ -1,0 +1,34 @@
+{
+  "E5HookURL": "https://api.e5.ai",
+  "PipedreamURL": "https://enmd5a575ce8yzk.m.pipedream.net/",
+  "OrchestratorBaseURL" : "https://orchestrator.services.e5.ai",
+  "OrchestratorAPIAsset" : "OrchestratorAPIUser",
+  "Clients": [{
+    "Name": "SelectData",
+    "enabled": "true",
+	"E5HookCredentialAsset": "SmartcareAH",
+	"PostInSlack": "True",
+	"UploadToBox": "False",
+	"GetLatestRunUpdate": "True",//Else Gets Bot summary of runs in Specified date range
+	"EnableQueueSearch" : "true",
+	"Queue_Search_String" : "SD",
+	"SendAlert": "True",
+	"AlertInterval": "15",
+	"AlertDBName": "AlertDB.json",
+	"BucketName": "E5_Utils",
+	"SlackChannelId": "C030REL3KUJ",
+	"Queue_Search_Limit" : 100,
+	"Tasks": [
+		
+		{
+		"TaskId": "60267fed26c6e900131b1230",
+		"TaskName": "Coding Inbound - Document Retrieval",
+		"ThresholdValue": 2,
+		"AlertInterval": 15,
+		"TimeInterval": -60,
+		"QueueNames": ["SDSmartCareInboundsweep2_Advantage", "SDSmartCareInboundsweep2_HCI", "SDSmartCareInboundsweep2_HCITX", "SDSmartCareInboundsweep2_TSC", "SDSmartCareInboundsweep2_Alpine", "SDSmartCareInboundsweep2_Hallmark"],
+		"Statuses" : ["Success", "Failed", "Needs Attention", "Skipped"]
+		}
+	]
+  }]
+}
